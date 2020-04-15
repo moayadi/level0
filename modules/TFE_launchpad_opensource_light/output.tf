@@ -59,6 +59,3 @@ output "diagnostics" {
   value = module.diagnostics
 }
 
-output "level0_principal" {
-  value = data.azuread_service_principal.logged_user.object_id
-}
