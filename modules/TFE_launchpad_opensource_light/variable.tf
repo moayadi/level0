@@ -1,6 +1,6 @@
 variable "logged_user_objectId" {
     description = "objectId of the logged user initializing the launchpad"
-    default = "6adfeb76-a89e-41bc-9401-514aaedadc61"
+    default = "694fbf88-5eb2-4481-b02a-036da12e6c5b"
 }
 
 variable "rover_pilot_client_id" {
