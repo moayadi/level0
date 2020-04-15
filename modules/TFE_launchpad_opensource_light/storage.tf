@@ -40,6 +40,3 @@ resource "azurerm_role_assignment" "storage_blob_contributor" {
   principal_id         = var.logged_user_objectId
 }
 
-data "azuread_service_principal" "logged_user" {
-  display_name = "moayadi-Azure-creds"
-}
