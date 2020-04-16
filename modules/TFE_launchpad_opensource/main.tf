@@ -10,12 +10,12 @@ provider "azuread" {
   version = "~> 0.7.0"
 }
 
-provider "azuredevops" {
-  version = "~> 0.0.1"
+# provider "azuredevops" {
+#   version = "~> 0.0.1"
 
-  org_service_url       = var.azure_devops_url_organization
-  personal_access_token = var.azure_devops_pat_token
-}
+#   org_service_url       = var.azure_devops_url_organization
+#   personal_access_token = var.azure_devops_pat_token
+# }
 
 
 provider "random" {
