@@ -16,7 +16,7 @@ resource "azuread_application" "devops" {
       id   = "1cda74f2-2616-4834-b122-5cb1b07f8a59"
       type = "Role"
     }
-  }
+  } 
 }
 
 resource "azuread_service_principal" "devops" {
@@ -76,16 +76,16 @@ resource "azurerm_key_vault_secret" "devops_password" {
 ##
 
 locals {
-  grant_admin_concent_command = "az ad app permission admin-consent --id ${azuread_application.devops.application_id}"
+  grant_admin_concent_command1 = "az ad app permission admin-consent --id ${azuread_application.devops.application_id}"
 }
 resource "null_resource" "grant_admin_concent" {
     depends_on = [azurerm_role_assignment.devops_role1]
 
     provisioner "local-exec" {
-        command = local.grant_admin_concent_command
+        command = local.grant_admin_concent_command1
     }
 
     triggers = {
-        grant_admin_concent_command    = sha256(local.grant_admin_concent_command)
+        grant_admin_concent_command1    = sha256(local.grant_admin_concent_command1)
     }
 }
