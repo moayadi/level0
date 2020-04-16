@@ -78,7 +78,7 @@ resource "azurerm_key_vault_secret" "devops_password" {
 locals {
   grant_admin_concent_command1 = "az ad app permission admin-consent --id ${azuread_application.devops.application_id}"
 }
-resource "null_resource" "grant_admin_concent" {
+resource "null_resource" "grant_admin_concent1" {
     depends_on = [azurerm_role_assignment.devops_role1]
 
     provisioner "local-exec" {
