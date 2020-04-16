@@ -3,10 +3,10 @@ variable "logged_user_objectId" {
     default = "694fbf88-5eb2-4481-b02a-036da12e6c5b"
 }
 
-variable "rover_pilot_client_id" {
-    description = "This variable is set when improving the launchpad to allow a rover to access the keyvault when running the rover command"
-    default = ""
-}
+# variable "rover_pilot_client_id" {
+#     description = "This variable is set when improving the launchpad to allow a rover to access the keyvault when running the rover command"
+#     default = ""
+# }
 
 
 variable "location" {

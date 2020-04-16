@@ -1,10 +1,10 @@
-output "storage_account_name" {
-  value = azurerm_storage_account.stg.name
-}
+# output "storage_account_name" {
+#   value = azurerm_storage_account.stg.name
+# }
 
-output "container" {
-  value = azurerm_storage_container.launchpad.name
-}
+# output "container" {
+#   value = azurerm_storage_container.launchpad.name
+# }
 
 output "resource_group" {
   value = azurerm_resource_group.rg.name
@@ -16,14 +16,14 @@ output "prefix" {
 }
 
 
-output "tfstate_map" {
-  value = map(
-    "storage_account_name", azurerm_storage_account.stg.name,
-    "container", azurerm_storage_container.launchpad.name,
-    "resource_group", azurerm_resource_group.rg.name,
-    "prefix", random_string.prefix.result
-  )
-}
+# output "tfstate_map" {
+#   value = map(
+#     "storage_account_name", azurerm_storage_account.stg.name,
+#     "container", azurerm_storage_container.launchpad.name,
+#     "resource_group", azurerm_resource_group.rg.name,
+#     "prefix", random_string.prefix.result
+#   )
+# }
 
 # output "deployment_msi" {
 #   value = map(
@@ -47,9 +47,9 @@ output "devops_client_secret" {
   sensitive = true
 }
 
-output "tfstate-blob-name" {
-  value = local.launchpad-blob-name
-}
+# output "tfstate-blob-name" {
+#   value = local.launchpad-blob-name
+# }
 
 output "log_analytics" {
   value = module.log_analytics
